@@ -6,7 +6,6 @@ do ($ = jQuery, window, document) ->
 		target: ""
 		template: "<strong>{{cnt}}</strong> of {{len}} characters allowed"
 
-	# The actual plugin constructor
 	class Plugin
 		constructor: (@element, options) ->
 			@settings = $.extend {}, defaults, options
@@ -21,9 +20,7 @@ do ($ = jQuery, window, document) ->
 			return
 
 		bindEvents: (me) ->
-
 			me.setCount()
-
 			$(@settings.target).on 'keyup', ->
 				me.setCount()
 
@@ -38,7 +35,6 @@ do ($ = jQuery, window, document) ->
 			len.length
 
 		getMaxLength: ->
-			# some logic
 			tgt = $(@element).data "count-target"
 			@settings.target = tgt
 			len = parseInt $(tgt).attr('maxlength')
