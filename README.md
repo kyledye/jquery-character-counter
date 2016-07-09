@@ -6,7 +6,7 @@ A basic jQuery plugin that uses a simple, overridable method to display the char
 
 1. Include the file as you typically would in your asset pipeline, via a `<script>` tag, etc.
 2. Add the count container element.  Example: `<div class="character-counter" data-count-target="#target-to-count"></div>`
-3. Make sure the element specified in `data-count-target` attribute has a "maxlen" attribute set
+3. Make sure the element specified in `data-count-target` attribute has a `maxlength` attribute set
 4. Initialize the plugin: `$('.character-counter').characterCounter();`
 
 ## Overrides
